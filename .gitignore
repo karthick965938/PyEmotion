@@ -2,6 +2,8 @@ build/
 dist/
 test_assets/
 PyEmotion.egg-info/
+PyEmotion/model/
 # ignore setup
 setup.py
 test.py
+TODO
