@@ -4,3 +4,4 @@ test_assets/
 PyEmotion.egg-info/
 # ignore setup
 setup.py
+test.py

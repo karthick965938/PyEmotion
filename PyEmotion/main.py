@@ -11,7 +11,7 @@ from progress.bar import ShadyBar
 # text = colored(text2art("PyEmotion"), 'blue')
 
 
-def MLDatasetBuilder():
-  text = colored(text2art("PyEmotion"), 'blue')
+def PyEmotion():
+  text = colored(text2art("PyEmotion"), 'yellow')
   print(text)
-  print(colored('Welcome to PyEmotion ', 'blue') + colored(':)', 'blue', attrs=['blink']))
+  print(colored('Welcome to PyEmotion ', 'yellow'))
