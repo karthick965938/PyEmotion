@@ -68,29 +68,7 @@ class DetectFace(object):
         frame = cv.rectangle(frame, (x1, y1), (x2, y2), color=[0, 255, 0], thickness=1)
         frame = cv.rectangle(frame, (x1, y1 - int(f_h*0.03125)), (x1 + int(f_w*0.125), y1), color=[0, 255, 0], thickness=-1)
         frame = cv.putText(frame, text=emotion, org=(x1 + 5, y1 - 3), fontFace=cv.FONT_HERSHEY_PLAIN, color=[0, 0, 0], fontScale=1, thickness=1)
-        if emotion == 'Happy' :
-          self.happy_count += 1
-        self.get_emotion_details(emotion+","+str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
-        print("-------Emotion: " + emotion + " -----------Time:" + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
-      return frame
+      return frame, emotion
     else:
-      self.get_emotion_details("NoFace,"+str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
-      print("-------Emotion: NoFace -----------Time:" + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
-      return frame
-
-  def get_emotion_details(self, value):
-    header = ['Emotion', 'Time']
-    some_list = value
-    my_file = os.path.join(self.user_dir, )
-    if os.path.exists(self.user_dir+"/emotion_details.csv"):
-      with open('emotion_details.csv', 'a', newline ='') as file:
-        writer = csv.writer(file, delimiter=',')
-        writer.writerow(some_list.split(','))
-    else:
-      with open('emotion_details.csv', 'wt', newline ='') as file:
-        writer = csv.writer(file, delimiter=',')
-        writer.writerow(i for i in header)
-        writer.writerow(some_list.split(','))
-
-  def store_emotion_details(self, dir_path):
-    self.user_dir = dir_path
+      emotion = 'NoFace'
+      return frame, emotion
