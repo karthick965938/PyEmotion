@@ -6,6 +6,8 @@ import cv2 as cv
 from facenet_pytorch import MTCNN
 import os
 import time
+import csv
+from datetime import datetime
 from art import *
 from termcolor import colored, cprint
 from progress.bar import ShadyBar
@@ -32,6 +34,8 @@ class DetectFace(object):
       if device == 'cpu':
         self.device = torch.device('cpu')
     self.happy_count = 0
+    self.user_dir = ''
+    self.status = {'Angry' : 0, 'Disgust' : 0, 'Fear' : 0, 'Happy' : 0, 'Sad' : 0, 'Surprise' : 0, 'Neutral' : 0, 'NoFace' : 0, 'Discussion' : 0 }
     self.network = NetworkV2(in_c=1, nl=32, out_f=7).to(self.device)
     self.transform = transforms.Compose([
       transforms.ToPILImage(),
@@ -51,7 +55,6 @@ class DetectFace(object):
     output = self.network(tensor)
     ps = torch.exp(output).tolist()
     index = np.argmax(ps)
-    print(self.emotions[index])
     return self.emotions[index]
 
   def predict_emotion(self, frame):
@@ -67,24 +70,27 @@ class DetectFace(object):
         frame = cv.putText(frame, text=emotion, org=(x1 + 5, y1 - 3), fontFace=cv.FONT_HERSHEY_PLAIN, color=[0, 0, 0], fontScale=1, thickness=1)
         if emotion == 'Happy' :
           self.happy_count += 1
-        # draw the label into the frame
-        draw_label(frame, 'Happy Count: '+str(self.happy_count), (20,20), (255,0,0))
+        self.get_emotion_details(emotion+","+str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
+        print("-------Emotion: " + emotion + " -----------Time:" + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
       return frame
     else:
-      print('No face detected')
+      self.get_emotion_details("NoFace,"+str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
+      print("-------Emotion: NoFace -----------Time:" + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")))
       return frame
 
-def draw_label(img, text, pos, bg_color):
-  font_face = cv.FONT_HERSHEY_SIMPLEX
-  scale = 0.8
-  color = (0, 0, 0)
-  thickness = cv.FILLED
-  margin = 2
+  def get_emotion_details(self, value):
+    header = ['Emotion', 'Time']
+    some_list = value
+    my_file = os.path.join(self.user_dir, )
+    if os.path.exists(self.user_dir+"/emotion_details.csv"):
+      with open('emotion_details.csv', 'a', newline ='') as file:
+        writer = csv.writer(file, delimiter=',')
+        writer.writerow(some_list.split(','))
+    else:
+      with open('emotion_details.csv', 'wt', newline ='') as file:
+        writer = csv.writer(file, delimiter=',')
+        writer.writerow(i for i in header)
+        writer.writerow(some_list.split(','))
 
-  txt_size = cv.getTextSize(text, font_face, scale, thickness)
-
-  end_x = pos[0] + txt_size[0][0] + margin
-  end_y = pos[1] - txt_size[0][1] - margin
-
-  cv.rectangle(img, pos, (end_x, end_y), bg_color, thickness)
-  cv.putText(img, text, pos, font_face, scale, color, 1, cv.LINE_AA)
+  def store_emotion_details(self, dir_path):
+    self.user_dir = dir_path
