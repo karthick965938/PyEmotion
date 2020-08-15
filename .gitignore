@@ -6,4 +6,5 @@ PyEmotion/model/
 # ignore setup
 setup.py
 test.py
+test2.py
 TODO
