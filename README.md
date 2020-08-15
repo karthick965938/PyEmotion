@@ -35,7 +35,7 @@ Run the following code to you can get the Initialize process output for the PyEm
 >>> from PyEmotion import *
 >>> PyEmotion()
 ```
-![package_sample_output](https://i1.wp.com/cdn-images-1.medium.com/max/800/1*h4KOBQoEjCaoUWjj0PzVjg.gif?ssl=1)
+![package_sample_output](https://github.com/karthick965938/PyEmotion/blob/master/assets/init.png)
 
 ## Requirements
 pytorch >= 1.2.0
