@@ -1,22 +1,13 @@
 # PyEmotion
 
-**PyEmotion** - A Python package for Facial Emotion Recognition using PyTorch.
-Using this python package we can easily get the emotion of the person.
-
-## Install
-```pip install PyEmotion```
-
-
-# PyEmotion
-
 **[PyEmotion-Version 1.0.0](https://pypi.org/project/PyEmotion/)** - A Python package for Facial Emotion Recognition using PyTorch
 PyEmotion is a python package which is helping to get the emotion of the person.
 
 
-[![python version](https://img.shields.io/badge/Python-3.6-yellow)](https://pypi.org/project/MLDatasetBuilder/)
-[![PyPI](https://img.shields.io/badge/pypi-v1.0.0-blue)](https://pypi.org/project/MLDatasetBuilder/)
-[![Downloads](https://pepy.tech/badge/mldatasetbuilder)](https://pepy.tech/project/mldatasetbuilder)
-[![Downloads](https://pepy.tech/badge/mldatasetbuilder/month)](https://pepy.tech/project/mldatasetbuilder/month)
+[![python version](https://img.shields.io/badge/Python-3.6-yellow)](https://pypi.org/project/PyEmotion/)
+[![PyPI](https://img.shields.io/badge/pypi-v1.0.0-blue)](https://pypi.org/project/PyEmotion/)
+[![Downloads](https://pepy.tech/badge/pyemotion)](https://pepy.tech/project/pyemotion)
+[![Downloads](https://pepy.tech/badge/pyemotion/month)](https://pepy.tech/project/pyemotion/month)
 
 **Author**: Karthick Nagarajan
 
