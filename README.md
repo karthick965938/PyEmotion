@@ -90,7 +90,7 @@ device = 'gpu' or cpu'
 gpu_id will be effective only when more than two GPUs are detected or it will through error.
 ```
 
-# Contributing
+## Contributing
 All issues and pull requests are welcome! To run the code locally, first, fork the repository and then run the following commands on your computer:
 
 ```sh
@@ -101,5 +101,5 @@ pip3 install -r requirements.txt
 ```
 When adding code, be sure to write unit tests where necessary.
 
-# Contact
+## Contact
 PyEmotion was created by [Karthick Nagarajan](https://stackoverflow.com/users/6295641/karthick-nagarajan?tab=profile). Feel free to reach out on [Twitter](https://twitter.com/Karthick965938) or through [Email!](karthick965938@gmail.com)
