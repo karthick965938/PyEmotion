@@ -1,7 +1,6 @@
 # PyEmotion
 
-**[PyEmotion-Version 1.0.0](https://pypi.org/project/PyEmotion/)** - A Python package for Facial Emotion Recognition using PyTorch
-PyEmotion is a python package which is helping to get the emotion of the person.
+**[PyEmotion-Version 1.0.0](https://pypi.org/project/PyEmotion/)** - A Python package for Facial Emotion Recognition using PyTorch. PyEmotion is a python package which is helping to get the emotion of the person.
 
 
 [![python version](https://img.shields.io/badge/Python-3.6-yellow)](https://pypi.org/project/PyEmotion/)
