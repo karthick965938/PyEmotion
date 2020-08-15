@@ -44,7 +44,7 @@ torchvision >= 0.3.0
 
 ## Available Operations
 
-***Webcam***  —  Result as a video
+1) ***Webcam***  —  Result as a video
 ```sh
 from PyEmotion import *
 import cv2 as cv
