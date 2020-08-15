@@ -19,7 +19,7 @@ We can install ***PyEmotion*** package using this command
 pip install PyEmotion
 ```
 
-### How to test?
+## How to test?
 When you run python3 in the terminal, it will produce output like this:
 
 ```sh
@@ -37,12 +37,12 @@ Run the following code to you can get the Initialize process output for the PyEm
 ```
 ![package_sample_output](https://i1.wp.com/cdn-images-1.medium.com/max/800/1*h4KOBQoEjCaoUWjj0PzVjg.gif?ssl=1)
 
-### Requirements
+## Requirements
 pytorch >= 1.2.0
 torchvision >= 0.3.0
 
 
-### Available Operations
+## Available Operations
 
 ***Webcam***  —  Result as a video
 ```sh
@@ -80,7 +80,7 @@ cv.imshow('frame', frame)
 cv.waitKey(0)
 ```
 
-### Arguments
+## Arguments
 
 ```sh
 er = DetectFace(device='cpu', gpu_id=0)
