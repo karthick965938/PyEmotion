@@ -1,0 +1,10 @@
+opencv-python
+Pillow
+art
+termcolor
+progress
+pytest
+facenet_pytorch
+numpy
+torch
+torchvision
