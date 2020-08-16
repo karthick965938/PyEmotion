@@ -38,8 +38,10 @@ Run the following code to you can get the Initialize process output for the PyEm
 ![package_sample_output](https://github.com/karthick965938/PyEmotion/blob/master/assets/init.png)
 
 ## Requirements
-pytorch >= 1.2.0
-torchvision >= 0.3.0
+```sh
+pytorch >= 1.5.1
+torchvision >= 0.6.1
+```
 
 
 ## Available Operations
