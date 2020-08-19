@@ -4,7 +4,7 @@ art
 termcolor
 progress
 pytest
-facenet_pytorch
+facenet-pytorch
 numpy
 torch
 torchvision

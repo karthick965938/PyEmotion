@@ -5,6 +5,6 @@ PyEmotion.egg-info/
 PyEmotion/model/
 # ignore setup
 setup.py
-test.py
-test2.py
+video.py
+image.py
 TODO
