@@ -35,7 +35,7 @@ Run the following code to you can get the Initialize process output for the PyEm
 >>> from PyEmotion import *
 >>> PyEmotion()
 ```
-![package_sample_output](https://github.com/karthick965938/PyEmotion/blob/master/assets/init.png)
+![package_sample_output](https://raw.githubusercontent.com/karthick965938/PyEmotion/master/assets/init.png?token=AD2U5DY7DKRVR6QIOOJDZ3S7IHEOS)
 
 ## Requirements
 ```sh
